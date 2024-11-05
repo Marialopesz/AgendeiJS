@@ -1,4 +1,4 @@
-# 🩺 Sistema de Agendamento de Consultas Médicas <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f917/512.gif" alt="🤗" width="50">
+# 🩺 Sistema de Agendamento de Consultas Médicas 
 
 Este projeto é um sistema completo de agendamento de consultas médicas, composto por três aplicações integradas:
 
