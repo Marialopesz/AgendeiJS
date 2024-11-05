@@ -1,9 +1,23 @@
 import "./navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/logo-white.png";
 
 
 function NavBar(){
+
+    const navigate = useNavigate();
+
+    function Logout(){     
+                    localStorage.removeItem
+                    localStorage.removeItem("sessionToken")
+                    localStorage.removeItem("sessionId")
+                    localStorage.removeItem("sessionEmail")
+                    localStorage.removeItem("sessionName")   
+                    navigate("/")       
+                    api.defaults.headers.common['Authorization'] = "";
+                    
+                    
+    }
 
     return <nav className="navbar fixed-top navbar-expand-lg bg-primary" data-bs-theme="dark">
             
@@ -30,12 +44,12 @@ function NavBar(){
                  <li className="nav-item">
                  <div className="btn-group">
                             <button type="button" className="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                Maria Eduarda Lopes
+                                {localStorage.getItem("sessionName")}
                             </button>
                             <ul className="dropdown-menu dropdown-menu-end">
                                 <li><Link className="dropdown-item" to="#">Meu Perfil</Link></li>
                                 <li><hr className="dropdown-divider" /></li>
-                                <li><Link className="dropdown-item" to="/">Desconectar</Link></li>
+                                <li><a className="dropdown-item" onClick={Logout}>Desconectar</a></li>
                             </ul>
                         </div>
                     </li>

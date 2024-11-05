@@ -1,7 +1,8 @@
 
 function Appointment(props){
 
-    const dt = new Date(props.booking_date)
+    //2024-05-25T08:00
+    const dt = new Date(props.booking_date + "T" + props.booking_hour); 
 
     return <> 
 
@@ -10,7 +11,7 @@ function Appointment(props){
                     <td >{props.doctor}</td>
                     <td >{props.service}</td>
                     <td >{new Intl.DateTimeFormat('pt-BR', 
-                        {dateStyle:'short'}).format(dt)}</td>
+                        {dateStyle:'short'}).format(dt)} - {props.booking_hour}h</td>
                     <td  className="text-end">{new Intl.NumberFormat('pt-BR', 
                         {style:'currency',currency: 'BRL'}).format(props.price)}</td>
                     <td className="text-end" >

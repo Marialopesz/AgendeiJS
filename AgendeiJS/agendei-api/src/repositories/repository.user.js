@@ -41,8 +41,48 @@ async function Profile(id_user){
     
 }
 
+async function InserirAdmin(name,email,password){
+
+        
+    let sql = `insert into admins (name,email,password) values (?,?,?)
+            returning id_admin`
+
+
+
+    const user = await query(sql,[name,email,password])
+
+
+    return user[0]
+    
+}
+
+async function ListarByEmailAdmin(email){
+
+    
+let sql = `select * from admins where email = ? `
+
+const user = await query(sql,[email])
+
+if (user.length == 0)
+    return [];
+else
+    return user[0]
+
+}
+
+async function Listar(){
+
+    
+    let sql = `select id_user, name, email from users order by name `
+    
+    const users = await query(sql,[])
+  
+        return users
+    
+    }
+
 
 
         
     
-    export default {Inserir,ListarByEmail,Profile}
+    export default {Inserir,ListarByEmail,Profile,InserirAdmin,ListarByEmailAdmin,Listar}

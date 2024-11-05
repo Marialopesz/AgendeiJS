@@ -15,6 +15,7 @@ function Rotas(){
         <Route path="/register" element={<Register/>}/>
         <Route path="/appointments" element={<Appointment/>}/>
         <Route path="/appointments/add" element={<AppointmentAdd/>}/>
+        <Route path="/appointments/edit/:id_appointment" element={<AppointmentAdd/>}/>
 
 
 
