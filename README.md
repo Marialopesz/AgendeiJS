@@ -52,4 +52,17 @@ O projeto tem como objetivo oferecer uma plataforma prática e eficiente para **
 1. **Instale as Dependências**:
    ```bash
    npm install
+2. **Executar o App Mobile (se estiver no PC)**:
+   ```bash
+   npm expo start --web
+3. **Para abrir o App Mobile no celular (lembre-se de baixar o ExpoGO antes e escanear o QRcode depois)**:
+   ```bash
+   npm expo start
+4. **Executar a Aplicação Web**:
+   ```bash
+   npm run dev
+5. **Executar a API**:
+   ```bash
+   node --watch src/index.js
+
 
