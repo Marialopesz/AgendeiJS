@@ -48,4 +48,8 @@ O projeto tem como objetivo oferecer uma plataforma prática e eficiente para **
 - **SQLite**: Banco de dados leve e eficiente, ideal para o armazenamento de dados de consultas médicas
 - **CRUD Completo**: Implementação completa das operações de criação, leitura, atualização e exclusão de consultas
 
+## 🚀 Como Rodar o Projeto
+1. **Instale as Dependências**:
+   ```bash
+   npm install
 
